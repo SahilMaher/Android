@@ -17,8 +17,9 @@ EditText edt_newunm,edt_newpass;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         btn=findViewById(R.id.btn_sign);
-        edt_newunm=findViewById(R.id.edt_newunm);
         edt_newpass=findViewById(R.id.edt_newpass);
+        edt_newunm=findViewById(R.id.edt_newunm);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
