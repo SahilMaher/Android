@@ -3,6 +3,8 @@ package com.example.multy_text_view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.MultiAutoCompleteTextView;
@@ -34,10 +36,24 @@ public class MainActivity extends AppCompatActivity {
 //        COUNTRIES = new String[]{
 //                "Belgium", "France", "Italy", "Germany", "Spain"
 //        };
+
+
+
+
         sp=findViewById(R.id.spinner);
         ArrayAdapter adapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, countries);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         sp.setAdapter(adapter2);
+        WebView webView = findViewById(R.id.web);
+
+
+        webView.loadUrl("https://instagram.com");
+
+
+        webView.getSettings().setJavaScriptEnabled(true);
+
+        
+        webView.setWebViewClient(new WebViewClient());
     }
 }
