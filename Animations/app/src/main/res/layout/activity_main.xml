@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -21,9 +22,10 @@
         android:id="@+id/alpha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
         android:text="Alpha"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -31,30 +33,33 @@
         android:id="@+id/scale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="16dp"
         android:text="Scale"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/alpha" />
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/alpha"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/routat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="20dp"
         android:text="Routate"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/scale" />
+        app:layout_constraintStart_toEndOf="@+id/alpha" />
 
     <Button
         android:id="@+id/translate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="8dp"
         android:text="Translate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/routat" />
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/routat"
+        app:layout_constraintStart_toEndOf="@+id/scale" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
